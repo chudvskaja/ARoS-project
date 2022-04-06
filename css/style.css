@@ -1,0 +1,520 @@
+:root {
+    --color-1: #186cb8;
+    --color-2: #2a9a9f;
+    --color-3: #f1b211;
+    --color-4: #e83611;
+    --color-5: #f9002f;
+  }
+
+  .colored {
+    /* фон */
+    background: #000;
+    /* межстрочное расстояние */
+    line-height: 1;
+    /* подключаем сетку */
+    display: grid;
+    /* ставим содержимое в центр */
+    place-items: center;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#demo {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
+}
+
+
+h1 {
+    /* настраиваем внешний вид шрифта */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+  
+    /* подстраиваем ширину заголовка под самое длинное слово*/
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  
+    /* делаем автоматические отступы */
+    margin: auto;
+    /* переводим все буквы в заглавные */
+    text-transform: uppercase;
+  /* делаем цветные полосы по тексту */
+background: linear-gradient(219deg, 
+var(--color-1) 19%, 
+transparent 19%,transparent 20%, 
+var(--color-2) 20%, var(--color-2)  39%,
+transparent 39%,transparent 40%, 
+var(--color-3) 40%,var(--color-3) 59% ,
+transparent 59%,transparent 60%, 
+var(--color-4) 60%, var(--color-4) 79%,
+transparent 79%, transparent 80%, 
+var(--color-5) 80%);
+/* обрезаем фон по контуру букв */
+background-clip: text;
+-webkit-background-clip: text;
+
+/* делаем заголовок прозрачным, чтобы был виден цветной фон */
+color: transparent;
+}
+
+h1, #demo {
+    text-align: center;  
+}
+
+.photo-text, .card-link {
+    color: #f1b211;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+@media screen and (max-width: 479px) {
+    .card-photo.one {
+        object-fit: contain;
+    }  
+}
+
+
+
+label {
+    color:#f1b211;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input {
+    width: 100%;
+}
+
+.submit {
+   background-color: var(--color-5);
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    margin: 20px auto ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.card-link {
+    margin-top: 10px;
+    padding: 10px 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card-title {
+    padding: 10px 0;
+    margin-bottom: 10px;
+   color: var(--color-5);
+}
+
+.reklame {
+    width: 80%;
+    margin: auto;
+}
+
+.banner {
+    width:100%;
+}
+
+.cards {
+    padding: 40px 0;
+    
+}
+
+header {
+    padding: 40px 0;
+}
+
+.carousel {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;  
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius : 25px;
+}
+
+.carousel_track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel_track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   background: transparent;
+   border: 0;
+   cursor: pointer;
+}
+
+.carousel_button--left {
+    z-index: 1000;
+    left: 1px;
+}
+
+.carousel_button--right {
+    right: 1px;
+}
+
+.carousel_button img {
+    width: 10px;
+}
+
+.carousel_nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel_indicator.current-slide {
+    background: rgb(156, 23, 23);
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+.card-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;   
+}
+
+footer > p {
+    color: white;
+    text-align: center;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .carousel {
+        height: 250px;
+        width: 460px; 
+    }
+  }
+
+  /* tablet screen */
+
+  @media screen and (min-width: 768px) {
+      .container {
+        width: 768px;
+      }
+
+      header {
+        padding: 80px 0;
+    }
+
+    h1 {
+        /* настраиваем внешний вид шрифта */
+        font-size: 70px;
+    }
+
+      #demo {
+        font-size: 70px;
+    }
+
+    .reklame {
+        width: 720px;
+        height: 90px;
+        margin: auto;
+    }
+
+    .cards {
+        padding: 80px 0;
+        
+    }
+
+    .card-photo.one {
+        object-fit: center;
+    }  
+
+    .cards-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-item {
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .photo-text, .card-link {
+        font-size: 14px;
+    }
+
+    .carousel {
+        position: relative;
+        height: 350px;
+        width: 750px;
+        margin: 0 auto;  
+    }
+    
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius : 25px;
+    }
+    
+    .carousel_track-container {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .carousel_track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        height: 100%;
+        transition: transform 250ms ease-in;
+    }
+    
+    .carousel_slide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .carousel_button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       background: transparent;
+       border: 0;
+       cursor: pointer;
+    }
+    
+    .carousel_button--left {
+        left: 2px;
+    }
+    
+    .carousel_button--right {
+        right: 2px;
+    }
+    
+    .carousel_button img {
+        width: 10px;
+    }
+    
+    .carousel_nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    
+    .carousel_indicator {
+        border: 0;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: white;
+        margin: 0 12px;
+        cursor: pointer;
+    }
+    
+    .carousel_indicator.current-slide {
+        background: rgb(156, 23, 23);
+    }
+    
+    .is-hidden {
+        display: none;
+    }
+
+    .submit {
+        margin: 20px 0 ;
+    }
+
+  }
+
+
+  /* desktop screen */
+
+  @media screen and (min-width: 1400px) {
+      .container {
+        width: 1400px;
+      }
+
+      h1 {
+        /* настраиваем внешний вид шрифта */
+        font-size: 100px;
+    }
+
+    .carousel {
+        height: 600px;
+        width: 1280px; 
+    }
+
+    .carousel_button--left {
+        left: -40px;
+    }
+    
+    .carousel_button--right {
+        right: -40px;
+    }
+    
+    .carousel_button img {
+        width: 20px;
+    }
+    
+    
+    .gallery {
+     padding: 80px 0px;
+    }
+
+    .card-item {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    .card-title {
+        font-size: 27px;
+    }
+
+    .photo-text, .card-link {
+    font-size: 18px;
+    }
+
+    footer > p {
+        font-size: 18px;
+    }
+
+  }
+
+  input, label {
+    margin: 5px 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  input {
+    /* background-color: var(--color-2); */
+    border-radius: 5px;
+    border: none;
+  padding: 5px;
+  }
+  
+  .form-group {
+    margin: 30px auto;
+    /* width: 450px; */
+  }
+  
+  /* .form-control {
+    float: left;
+  } */
+  
+  #inputStreet {
+    width: 100%;
+  }
+  
+  #inputCity {
+    width: 50%;
+  }
+  
+  #inputState {
+    width: 15%;
+  }
+  
+  #inputZip {
+    width: 28%;
+  }
+  
+  #inputCounty {
+    width: 45%;
+  }
+  
+  #inputCountry {
+    width: 50%;
+  }
+  
